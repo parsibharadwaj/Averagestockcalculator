@@ -17,7 +17,7 @@ def predict():
     Z = float(request.form['C'])
     K = float(request.form['D'])
     v=int(K)
-    average=(((X*Y)+(Z*K))/Y+K)
+    average=X*Y+Z*K/Y+K
     
     return render_template('predict.html', average=average, sep=v)
 
